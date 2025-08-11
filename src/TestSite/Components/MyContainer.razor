@@ -1,0 +1,13 @@
+@* This is a custom container used in :::myContainer blocks.
+   It gets rendered automatically by Blake as <MyContainer>...</MyContainer>.
+   You can style or structure it however you want. *@
+
+<!-- Components/MyContainer.razor -->
+<div class="border border-primary rounded p-3 my-4 bg-light-subtle">
+    @ChildContent
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}
